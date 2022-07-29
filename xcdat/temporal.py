@@ -968,6 +968,7 @@ class TemporalAccessor:
         # only select the general DType and not details such as the byte order
         # or time unit (with rare exceptions see release notes). To avoid this
         # warning please use the scalar types `np.float64`, or string notation.`
+        time_lengths.load()
         time_lengths = time_lengths.astype(np.float64)
 
         grouped_time_lengths = self._group_data(time_lengths)
